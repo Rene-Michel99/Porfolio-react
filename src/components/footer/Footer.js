@@ -20,8 +20,8 @@ const Footer = (props) => {
             </ul>
 
             <div className="footer__socials">
-                <a href="https://linkedin.com"><BsLinkedin/></a>
-                <a href="https://github.com"><FaGithub/></a>
+                <a href="https://www.linkedin.com/in/rene-michel-santana-padilha/"><BsLinkedin/></a>
+                <a href="https://github.com/Rene-Michel99"><FaGithub/></a>
             </div>
 
             <div className="footer__copyright">
