@@ -3,13 +3,18 @@ import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai';
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi';
 import './nav.css';
 import {useState} from 'react';
-//import {RiServiceLine} from 'react-icons/ri';
+import {MdOutlineDesignServices} from 'react-icons/md';
+import {GrProjects} from 'react-icons/gr';
 
 const Nav = () => {
-    const [activeNav, setActiveNav] = useState('#');
+    const [activeNav, setActiveNav] = useState('#home');
     return (
         <nav>
-            <a href="#intro" className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
+            <a 
+                href="#home"
+                onClick={() => setActiveNav('#home')}
+                className={activeNav === '#home' ? 'active' : ''}
+                ><AiOutlineHome/></a>
             <a
                 href="#about"
                 onClick={() => setActiveNav('#about')}
@@ -20,6 +25,16 @@ const Nav = () => {
                 onClick={() => setActiveNav('#experience')}
                 className={activeNav === '#experience' ? 'active' : ''}
                 ><BiBook/></a>
+            <a
+                href="#services"
+                onClick={() => setActiveNav('#services')}
+                className={activeNav === '#services' ? 'active' : ''}
+                ><MdOutlineDesignServices/></a>
+            <a
+                href="#portfolio"
+                onClick={() => setActiveNav('#portfolio')}
+                className={activeNav === '#portfolio' ? 'active' : ''}
+                ><GrProjects/></a>
             <a
                 href="#contact"
                 onClick={() => setActiveNav('#contact')}

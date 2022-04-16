@@ -8,16 +8,17 @@ import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
 function App() {
+  const userLang = navigator.language || navigator.userLanguage;
   return (
     <>
-      <Header />
+      <Header lang={userLang}/>
       <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <About lang={userLang}/>
+      <Experience lang={userLang}/>
+      <Services lang={userLang}/>
+      <Portfolio lang={userLang}/>
+      <Contact lang={userLang}/>
+      <Footer lang={userLang}/>
     </>
 
   );

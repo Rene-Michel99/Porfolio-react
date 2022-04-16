@@ -4,12 +4,16 @@ import ME from '../../assets/me.png';
 import {FaAward} from 'react-icons/fa';
 import {FiUsers} from 'react-icons/fi';
 import {VscFolderLibrary} from 'react-icons/vsc';
+import getLanguage from './langs';
 
-const About = () => {
+const About = (props) => {
+    console.log(props)
+    const lang = getLanguage(props.lang);
+    console.log(lang)
     return (
         <section id="about">
-            <h5>Get To Known Projects</h5>
-            <h2>About Me</h2>
+            <h5>{lang.intro}</h5>
+            <h2>{lang.about}</h2>
             <div className="container about__container">
                 <div className="about__me">
                     <div className="about__me-image">
@@ -20,27 +24,25 @@ const About = () => {
                     <div className="about__cards">
                         <article className="about__card">
                             <FaAward className="about__icon" />
-                            <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <h5>{lang.experience}</h5>
+                            <small>{lang.expTime}</small>
                         </article>
                     </div>
                     <div className="about__cards">
                         <article className="about__card">
                             <FiUsers className="about__icon" />
-                            <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <h5>{lang.users}</h5>
+                            <small>{lang.usersQty}</small>
                         </article>
                     </div>
                     <div className="about__cards">
                         <article className="about__card">
                             <VscFolderLibrary className="about__icon" />
-                            <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <h5>{lang.projects}</h5>
+                            <small>{lang.projectsQty}</small>
                         </article>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis orci vitae hendrerit consectetur. Phasellus porttitor sapien a vestibulum efficitur. Proin vel nunc fermentum, vestibulum justo quis, consequat diam. Nunc eu mattis augue. Praesent fermentum rhoncus dictum. Morbi risus massa, sagittis non mollis et, consectetur fermentum nisi. 
-                    </p>
+                    <p>{lang.resume}</p>
                 </div>
             </div>
         </section>
